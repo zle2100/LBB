@@ -1,0 +1,8 @@
+city,population,homicides_2016,homicides_2017,lat,lon,had_mass_shooting
+Chicago,2705000,762,650,41.8781,-87.6298,no
+Baltimore,614000,343,318,39.2904,-76.6122,no
+Philadelphia,1568000,317,277,39.9526,-75.1652,no
+New York,8538000,290,335,40.7128,-74.0060,no
+Los Angeles,3976000,286,293,34.0522,118.2437,no
+Las Vegas,632000,168,264,36.1699,115.1398,yes
+Orlando,277000,84,25,28.5383,81.3792,yes

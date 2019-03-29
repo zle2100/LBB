@@ -1,0 +1,67 @@
+## Your basic render function
+
+    function render() {
+      // Calculate height/width
+      let screenWidth = svg.node().parentNode.parentNode.offsetWidth
+      let screenHeight = window.innerHeight
+      let newWidth = screenWidth - margin.left - margin.right
+      let newHeight = screenHeight - margin.top - margin.bottom
+
+      // Update your SVG
+      let actualSvg = d3.select(svg.node().parentNode)
+      actualSvg
+        .attr('height', newHeight + margin.top + margin.bottom)
+        .attr('width', newWidth + margin.left + margin.right)
+
+      // Update scales (depends on your scales)
+      xPositionScale.range([0, newWidth])
+      yPositionScale.range([newHeight, 0])
+
+      // Reposition/redraw your elements
+
+      // Update axes if necessary
+      svg.select('.x-axis').call(xAxis)
+      svg.select('.y-axis').call(yAxis)
+    }
+
+## Listening for resizing
+
+Fire 'render' every time the window size changes
+
+    window.addEventListener('resize', render)
+    render()
+
+Happening too often? Definitely! Try debouncing. `npm install debounce`
+
+    window.addEventListener('resize', debounce(render, 200))
+    render()
+
+I added 'render()' after each one because you should always call it when you're done, so it fits the size of the current window.
+
+## Calculating height/width in render
+
+There are a few way to the target height/width
+
+Maximum size, height and width:
+
+    let screenWidth = svg.node().parentNode.parentNode.offsetWidth
+    let screenHeight = window.innerHeight
+
+Keep initial aspect ratio, max width:
+
+    let screenWidth = svg.node().parentNode.parentNode.offsetWidth
+    let screenHeight = (height / width) * screenWidth
+
+Keep initial aspect ratio, max height:
+
+    let screenHeight = window.innerHeight
+    let screenWidth = (width / height) * screenHeight
+
+## Updating your axes
+
+After you update your xPositionScale/etc, you'll sometimes want to update any existing axes. This finds them on the page by class, and then does the magic with the axis variables.
+
+    svg.select('.x-axis').call(xAxis)
+    svg.select('.y-axis').call(yAxis)
+
+This usually works without you changing the xAxis or yAxis variables since they know about your scales. Things like `.tickSize` or `.ticks` will need to be fixed up, though!
