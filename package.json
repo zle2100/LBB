@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir docs --public-url /change-me-to-match-your-repo"
+    "build": "parcel build src/index.html --out-dir docs --public-url /LBB"
   },
   "jest": {
     "setupFiles": [
@@ -14,7 +14,7 @@
     ]
   },
   "keywords": [],
-  "author": "Jonathan Soma <jonathan.soma@gmail.com> (http://jonathansoma.com)",
+  "author": "ZE",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.5.0",
