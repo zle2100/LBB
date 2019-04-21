@@ -104,39 +104,36 @@
           <div class="row">
             <div class="col-sm-12 mt-5 mb-5">
                 <center><h2><strong>INSPECTING THE LIGHTBULBS THAT DID NOT COME WITH APPS</strong></h2></center>
-              <!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8' />
-<title>Display a map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-<style>
-body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-</head>
-<body>
- 
-<div id='map'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiemxlMjEwMCIsImEiOiJjanVyMXR2N2EzdXB3NDRwanY4NWFiczlkIn0._LVB8FjfYhf3B8LbJGi8Zw';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/zle2100/cjur2c9oa00y01gpjq4ja8wji',
-center: [-118.410600, 33.750013],
-zoom: 13.0
-});
-</script>
- 
-</body>
-</html>
-            
+            </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 mt-5 mb-5">
+                        <title>Display a map</title>
+                        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+                        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+                        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+                        <style>
+                          body { margin:0; padding:0; }
+                          #map { position:absolute; top:0; bottom:0; width:100%; }
+                        </style>
+                      </head>
+                      <body>
+                      
+                      <div id='map'></div>
+                      <script>
+                      mapboxgl.accessToken = 'pk.eyJ1IjoiemxlMjEwMCIsImEiOiJjanVyMXR2N2EzdXB3NDRwanY4NWFiczlkIn0._LVB8FjfYhf3B8LbJGi8Zw';
+                      const map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/zle2100/cjur2c9oa00y01gpjq4ja8wji',
+                        center: [-118.410600, 33.750013],
+                        zoom: 13.0
+                      });
+                      </script>
     <div class="container">
       <div class="row">
         <div class="col-sm-12 mt-5 mb-5">
-            <center><img src="data/FrightBulbs.jpg" width="750" height="450" alt="logo" /></center>
+            <center><img src="/LBBS/data/FrightBulbs.jpg" width="750" height="450" alt="logo" /></center>
         </div>
       </div>
      
@@ -184,9 +181,9 @@ zoom: 13.0
 
     </div>
 
-    <script src="01-chart.js"></script>
+    <script src="/LBBS/01-chart.js"></script>
     <!-- <script src="04-chart.js"></script> -->
-    <script src="scrollytelling.js"></script>
+    <script src="/LBBS/scrollytelling.js"></script>
 
    </body>
 </html>
