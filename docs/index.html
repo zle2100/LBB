@@ -116,110 +116,7 @@ body {
   clear: both;
 }
         
-@import url(https://fonts.googleapis.com/css?family=Expletus+Sans:600);
-/*==========SCALE-IN==========*/
-@-webkit-keyframes scale-in {
-     0%   {transform: scale(10, 10); opacity: 0;}
-    100% {transform: scale(1, 1); opacity: 1;}
-}
 
-@keyframes scale-in {
-    0%   {transform: scale(10, 10); opacity: 0;}
-    100% {transform: scale(1, 1);  opacity: 1;}
-}
-/*==========ROLL-OUT==========*/
-@-webkit-keyframes roll-out {
-    0%   {width: 0;}
-    100% {width: 100%; }
-}
-@keyframes roll-out {
-    0%   {width: 0;}
-    100% {width: 100%; }
-}
-body{
-   background: #392f28;
-}
-main{
-  width: 100%;
-  overflow: hidden;
-  font-family: 'Expletus Sans', cursive;
-}
-.hero{
-  width: 100%;
-  max-width: 1200px;
-  height: 500px;
-  text-align: center;
-  margin: 0 auto;
-  background: #392f28;
-  position: relative; 
-  color: #392f28;
-}
-
-.hero h1{
-  font-size: 4.1em;
-  margin: auto;
-  position: absolute; 
-  top: 120px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-.hero p{
-  font-size: 1.5em;
-  margin: auto;
-  position: absolute; 
-  top: 220px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-   z-index: 1;
-}
-.hero img{
-  width: 100%;
-}
-.bar{
-  width: 100%;
-  height: 200px;
-  background: -moz-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
-  background: -webkit-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
-  background: -ms-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
-  background: linear-gradient(161deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
-  opacity: 0.3;
-  position: absolute; 
-  z-index: 0;
-  left: 0;
-  top: 90px;
-  -ms-transform-origin: 100% 0%;
-  -webkit-transform-origin: 100% 0%;
-  transform-origin: 100% 0%;
-   -webkit-animation: roll-out 1.2s ease-out ;
-  -moz-animation: roll-out 1.2s ease-out ;
-    animation: roll-out 1.2s ease-out ; 
-}
-.hero h1, .hero p{
-  -webkit-animation: scale-in 1.3s ease-out;
-  -moz-animation: scale-in 1.3s  ease-out;
-    animation: scale-in 1.3s ease-out; 
-}
-
-
-@media all and (max-width: 768px) {
-  .hero{
-    height: 50vw;
-  }
-  .bar{
-    height: 26vw;
-    top: 10vw;
-  }
-  .hero h1{
-    font-size: 8vw;
-    top: 13vw;
-  }
-  .hero p{
-    font-size: 3vw;
-    top: 27vw;
-  }
         
 }
     </style>
@@ -229,11 +126,10 @@ main{
     
 
     <main>
-  <div class="hero">
+  <div class="container">
     <h1>Some Fancy Header Text</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <img src="1200px-Lianhuashan_Park_Shenzen_China_1310762.jpg" />
-     <div class="bar"></div>
   </div>
   </div>
  
